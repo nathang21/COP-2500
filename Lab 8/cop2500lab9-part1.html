@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 08 (or Lab 09?) Part 1 -->
+
+</head>
+
+<body>
+
+	
+	<h1>Display Message based on age</h1>
+	<script language="javascript">
+		//The program contains couple of syntax errors. You need
+		//to find the errors using the Firefox and Google Chrome debuggers and correct the
+		//errors.
+		
+		
+		// Fixed Program
+		// Assign Variables to the imput from user after the prompt.
+		var name=prompt("What is your name?", "");
+		var age=prompt(name + " what is your age?", "Enter your age: " );
+		
+		// Determine the category based on age
+		// Output Corresponding Message
+		if(age < 18)
+		{
+			if(age < 12)
+			{
+				alert(name + " you are still a child");
+			}
+			else
+			{
+				alert(name + " you are a teenager now");
+			}	
+		}
+		else
+		{
+			if(age < 60)
+			{
+				alert(name + " you are an adult");
+			}
+			else
+			{
+				alert(name + " you are a senior citizen");
+			}
+		}
+	</script>
+		
+
+</body>
+</html>

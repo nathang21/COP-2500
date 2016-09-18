@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 09 Part 4 -->
+</head>
+<body>
+
+	<script language="JavaScript">
+// Step 1
+document.write("<h3> Step 1 </h3>");
+var str1 = "Maria lived in Santa Maria for many years";
+document.write("(creating string objcet 'str1' as: " +str1+ ")" +"<br>");
+document.write("<hr>");
+
+// Step 2
+document.write("<h3> Step 2 </h3>");
+var pos1 = str1.indexOf("Maria", 1);
+document.write("The starting index position for the second instance of the substring 'Maria' in the string 'str1' is at: "+ pos1);
+document.write("<br>");
+document.write("<hr>");
+
+// Step 3
+document.write("<h3> Step 3 </h3>");
+var str2 = "While everyone was earning a living and yearning for an ear of corn, the earnest farmers kept working for years and years.";
+var sub = "ear";
+count = 0;
+for(var i = 0; i < str2.length; i++)
+{
+	if (sub == str2.substr(i, sub.length))
+	{
+		count++;
+	}
+}
+document.write("The sub string 'ear' shows up in the string 'str2' : "+count+" times"+"<br>");
+
+var counter = 1;
+while(str2.indexOf("ear") > -1)
+{
+	document.write("The postion of the " + counter +" ear is: "+str2.indexOf("ear")+"<br>");
+	str2 = str2.replace("ear", "yyyyyyy");
+	counter ++;
+}
+
+document.write("<br>");
+document.write("<hr>");
+
+// Step 4
+document.write("<h3> Step 4 </h3>");
+var str3 = "This part tests our ability to use JavaScript methods that mimic HTML tags."
+document.write(str3.fontcolor("Blue").italics().fontsize(12).toUpperCase() +"<br>");
+document.write("<br>");
+document.write("<hr>");
+
+	</script>
+
+</body>
+</html>

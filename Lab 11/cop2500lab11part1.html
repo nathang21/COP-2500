@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 11 Part 1-->
+
+	<script language=JavaScript>
+	// Part 1 Lab 11 (Part 3 Lab 10)
+	var sumQuiz = 0
+	var sumMid = 0
+	var f = 0
+	function PopulateArray(u,v,p) {
+	for (v; v <= p; v++){
+	u[v] = Math.floor(Math.random()*(100 - 50 + 1))+50}
+	}
+	//populate Array at specific points with numbers between 50 and 100
+	function CalculateGrade (a,u,o,v,p,e,h) {
+	f = (a[u]*.2)
+	for (x = o; x <= v; x++) {sumQuiz = a[x] + sumQuiz}
+	sumQuiz = sumQuiz/10 * .1
+	f = f + sumQuiz
+	for (x = p; x <= e; x++) {sumMid = a[x] + sumMid}
+	sumMid = sumMid/2 * .35
+	f = f + sumMid + (a[h] * .35)
+	f = Math.ceil(f)
+
+	if (f < 60) {return document.write(f +" F" + "</br>")}
+	else if (f < 69) {return document.write(f +" D" + "</br>")}
+	else if (f < 79) {return document.write(f +" C" + "</br>")}
+	else if (f < 89) {return document.write(f +" B" + "</br>")}
+	else {return document.write(f +" A" + "</br>")}
+	}
+	</script>
+</head>
+
+<body>
+
+	<script language=JavaScript>
+		
+	// Part 1 Lab 11 (Part 3 Lab 10)
+	var gradebook =[Doe,Jones,Smith,Torres]
+	var Doe = new Array
+	var Jones = new Array
+	var Smith = new Array
+	var Torres = new Array
+	PopulateArray(Doe,0,14)
+	PopulateArray(Jones,0,14)
+	PopulateArray(Smith,0,14)
+	PopulateArray(Torres,0,14)
+	document.write("Student Name: " + "<b>"  + "Doe" + "</b>" + "</br>")
+	document.write("Research Paper = " + Doe[0] + "</br>")
+	document.write("Pop Quizzes = " + Doe[1] + ", " + Doe[2] + ", " + Doe[3] + ", " + Doe[4] + ", " + Doe[5] + ", " + Doe[6] + ", " + Doe[7] + ", " + Doe[8] + ", " + Doe[9] + ", " + Doe[10] + "</br>")
+	document.write("Midterms = " + Doe[11] + ", " + Doe[12] + "</br>")
+	document.write("Final = " + Doe[13] + "</br>")
+	document.write("<br>");
+	document.write("Student Name: " + "<b>"  + "Jones" + "</b>" + "</br>")
+	document.write("Research Paper = " + Jones[0] + "</br>")
+	document.write("Pop Quizzes = " + Jones[1] + ", " + Jones[2] + ", " + Jones[3] + ", " + Jones[4] + ", " + Jones[5] + ", " + Jones[6] + ", " + Jones[7] + ", " + Jones[8] + ", " + Jones[9] + ", " + Jones[10] + "</br>")
+	document.write("Midterms = " + Jones[11] + ", " + Jones[12] + "</br>")
+	document.write("Final = " + Jones[13] + "</br>")
+	document.write("<br>");
+	document.write("Student Name: " + "<b>"  + "Smith" + "</b>" + "</br>")
+	document.write("Research Paper = " + Smith[0] + "</br>")
+	document.write("Pop Quizzes = " + Smith[1] + ", " + Smith[2] + ", " + Smith[3] + ", " + Smith[4] + ", " + Smith[5] + ", " + Smith[6] + ", " + Smith[7] + ", " + Smith[8] + ", " + Smith[9] + ", " + Smith[10] + "</br>")
+	document.write("Midterms = " + Smith[11] + ", " + Smith[12] + "</br>")
+	document.write("Final = " + Smith[13] + "</br>")
+	document.write("<br>");
+	document.write("Student Name: " + "<b>"  + "Torres" + "</b>" + "</br>")
+	document.write("Research Paper = " + Torres[0] + "</br>")
+	document.write("Pop Quizzes = " + Torres[1] + ", " + Torres[2] + ", " + Torres[3] + ", " + Torres[4] + ", " + Torres[5] + ", " + Torres[6] + ", " + Torres[7] + ", " + Torres[8] + ", " + Torres[9] + ", " + Torres[10] + "</br>")
+	document.write("Midterms = " + Torres[11] + ", " + Torres[12] + "</br>")
+	document.write("Final = " + Torres[13] + "</br>")
+	document.write("</br>")
+	document.write("<b>" + "Final Grades:" +"</b>" + "</br>")
+	document.write("Doe: ")
+	CalculateGrade(Doe,0,1,10,11,12,13)
+	document.write("Jones: ")
+	CalculateGrade(Jones,0,1,10,11,12,13)
+	document.write("Smith: ")
+	CalculateGrade(Smith,0,1,10,11,12,13)
+	document.write("Torres: ")
+	CalculateGrade(Torres,0,1,10,11,12,13)
+	
+	</script>
+</body>
+</html>

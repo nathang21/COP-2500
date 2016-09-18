@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Nathan Guenther - Form data format check</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 11 Part 2 -->
+
+	<script language="JavaScript"> 
+	function checkFormats(){
+	var name = document.getElementById("text1");
+	var regExStrng=/^[a-zA-z]+$/ ;
+	if(name.value == "" || name.value == null || regExStrng.test(name.value) == false){
+	alert("Not a valid name"); //Generate Alert	
+	}
+	else{
+	alert("Name is valid");
+	}
+	var zip = document.getElementById("text2");
+	var regExNum =/^\d{5}$/; // 5 numbers
+	if(regExNum.test(zip.value) == false){
+	alert("Not a valid zip code");//Generate Alert
+	}
+	else{
+	alert("Zip is valid");
+	}
+	}
+	</script>
+</head>
+
+<body>
+
+<big>
+<form name="form1" id="form1" method="GET" action="">
+Enter your name
+<input type="text" name="fullName" size="50" id="text1"/>
+<br/>
+Enter your zip code
+<input type="text" name="zipCode" size="10" id="text2"/>
+<br/> <br/>
+<input type="submit" onClick="checkFormats()"/>
+</form>
+
+
+	
+</big>
+
+
+</body>
+
+</html>

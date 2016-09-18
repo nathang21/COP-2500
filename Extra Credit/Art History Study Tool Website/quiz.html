@@ -1,0 +1,168 @@
+<html>
+<head> 
+<title> Art History Quiz </title>
+
+<style type="text/css">
+<!--
+.bgclr {background-color: white; color: black; font-weight: bold;}
+-->
+</style>
+
+<script language="JavaScript">
+
+// Insert number of questions
+var numQues = 10;
+
+// Insert number of choices in each question
+var numChoi = 3;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(10);
+
+// Insert answers to questions
+answers[0] = "Pablo Picasso";
+answers[1] = "1950";
+answers[2] = "Johannes Vermeer, Dutch";
+answers[3] = "Diego Velazquez, 1656";
+answers[4] = "Leonardo Da Vinci";
+answers[5] = "Pablo Picasso, Spanish";
+answers[6] = "Post-Impressionism";
+answers[7] = "Gustav Klimt, Austrian";
+answers[8] = "The Persistence of Memory";
+answers[9] = "Edvard Munch";
+
+// Calculate Score
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+//  End -->
+</script>
+
+
+</head>
+
+<body>
+	<h1>Extra Credit</h1>
+	<h2>Art History Quiz</h2>
+	<h3>by Shanna Corlew, Joe Moceri, & Nathan Guenther </h3>
+
+<form name="quiz">
+1. Identify the artist.
+<ul style="margin-top: 1pt">	
+  <img src="images/image1.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q1" value="Diego Velazquez">Diego Velazquez</li>
+  <li><input type="radio" name="q1" value="Pablo Picasso">Pablo Picasso</li>
+  <li><input type="radio" name="q1" value="Gustav Klimt">Gustav Klimt</li>
+</ul>
+
+2. Identify the year this painting was created.
+<ul style="margin-top: 1pt">
+  <img src="images/image2.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q2" value="1950">1950</li>
+  <li><input type="radio" name="q2" value="1889">1889</li>
+  <li><input type="radio" name="q2" value="1931">1931</li>
+</ul>
+
+3. Identify the artist and their nationality.
+<ul style="margin-top: 1pt">
+  <img src="images/image3.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q3" value="Pablo Picasso, Spanish">Pablo Picasso, Spanish</li>
+  <li><input type="radio" name="q3" value="Johannes Vermeer, French">Johannes Vermeer, French</li>
+  <li><input type="radio" name="q3" value="Johannes Vermeer, Dutch">Johannes Vermeer, Dutch</li>
+</ul>
+
+4. Identify the artist and year the painting was created.
+<ul style="margin-top: 1pt">
+  <img src="images/image4.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q4" value="Vincent Van Gogh, 1889">Vincent Van Gogh, 1889</li>
+  <li><input type="radio" name="q4" value="Edvard Munch, 1893">Edvard Munch, 1893</li>
+  <li><input type="radio" name="q4" value="Diego Velazquez, 1656">Diego Velazquez, 1656</li>
+</ul>
+
+5. Identify the artist.
+<ul style="margin-top: 1pt">
+  <img src="images/image5.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q5" value="Leonardo Da Vinci">Leonardo Da Vinci</li>
+  <li><input type="radio" name="q5" value="Salvador Dali">Salvador Dali</li>
+  <li><input type="radio" name="q5" value="Jackson Pollock">Jackson Pollock</li>
+</ul>
+
+6. Identify the artist and his nationality.
+<ul style="margin-top: 1pt">
+  <img src="images/image6.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q6" value="Pablo Picasso, Italian">Pablo Picasso, Italian</li>
+  <li><input type="radio" name="q6" value="Salvador Dali, Spanish">Salvador Dali, Spanish</li>
+  <li><input type="radio" name="q6" value="Pablo Picasso, Spanish">Pablo Picasso, Spanish</li>
+</ul>
+
+7. Identify the style.
+<ul style="margin-top: 1pt">
+  <img src="images/image7.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q7" value="Expressionism">Expressionism</li>
+  <li><input type="radio" name="q7" value="Post-Impressionism">Post-Impressionism</li>
+  <li><input type="radio" name="q7" value="Symbolism">Symbolism</li>
+</ul>
+
+8. Identify the artist and his nationality.
+<ul style="margin-top: 1pt">
+  <img src="images/image8.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q8" value="Vincent Van Gogh, Dutch">Vincent Van Gogh, Dutch</li>
+  <li><input type="radio" name="q8" value="Gustav Klimt, Dutch">Gustav Klimt, Dutch</li>
+  <li><input type="radio" name="q8" value="Gustav Klimt, Austrian">Gustav Klimt, Austrian</li>
+</ul>
+
+9. Identify the name of this painting.
+<ul style="margin-top: 1pt">
+  <img src="images/image9.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q9" value="The Persistence of Memory">"The Persistence of Memory"</li>
+  <li><input type="radio" name="q9" value="Las Meninas">"Las Meninas"</li>
+  <li><input type="radio" name="q9" value="Guernica">"Guernica"</li>
+</ul>
+
+10. Identify the artist.
+<ul style="margin-top: 1pt">
+  <img src="images/image10.jpg" alt="" id="mainImg" width="200" height="200">
+  <li><input type="radio" name="q10" value="Salvador Dali">Salvador Dali</li>
+  <li><input type="radio" name="q10" value="Edvard Munch">Edvard Munch</li>
+  <li><input type="radio" name="q10" value="Pablo Picasso">Pablo Picasso</li>
+</ul>
+
+<input type="button" value="Get score" onClick="getScore(this.form)" >
+<input type="reset" value="Clear answers">
+<p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
+Correct answers:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+</textarea>
+</form>
+
+
+<p>
+
+
+</body>
+<input type=button 
+value="Study Again!"
+onClick="self.location='flashcards.html'">
+</form> 
+</html>

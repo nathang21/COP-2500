@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 06 -->
+
+	<script language="JavaScript">
+		
+		// Set Variables
+		var list1 = [];
+		var list2 = [];
+		var i;
+			
+	</script>
+</head>
+
+<body>
+	<h1>Compare numbers from two separate lists</h1>
+	<script language="JavaScript">
+	
+		// Initialization
+		for (i = 0; i < 10; i++)
+		{
+			list1[i] = Math.floor(Math.random()*101);
+			list2[i] = Math.floor(Math.random()*101);
+		}
+		
+		// Computation and Output
+		for (i = 0; i < 10; i++)
+		{
+			if ( list1[i] > list2[i] )
+			{
+			document.write(list1[i] + " is greater than " + list2[i]);
+			document.write("<br>");
+			}
+			else if ( list1[i] < list2[i] )
+			{
+			document.write(list1[i] + " is less than " + list2[i]);
+			document.write("<br>");
+			}
+			else
+			{
+			document.write(list1[i] + " is equal to " + list2[i]);
+			document.write("<br>");
+			}
+		}
+	
+	
+	</script>
+		
+
+</body>
+</html>

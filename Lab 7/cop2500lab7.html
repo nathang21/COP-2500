@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 07 -->
+
+	<script language="JavaScript">
+		
+		// The "main" program 1
+		var x;
+		var y;
+
+		x = average(10, 20) + average(30, 50) + average(0, 20);
+		y = average(10, 70) + average(30, 50);
+
+		document.write("<b>Program 1:</b> <br>");
+		document.write("The correct answer is: x = 65, y = 80. <br>");
+		document.write("The current answer is: x =" + x + ", y = " + y + ".<br>");
+
+		// This function takes in two numbers and returns the average.
+		function average(u, v) {
+		  var z;
+		  z = (u + v) / 2;
+		  return z;
+		}
+
+</script>
+
+</head>
+
+<body>
+	<h1></h1>
+	<script language="JavaScript">
+	
+		// The "main" program 2
+		var total;
+		var x;
+		var i;
+
+
+		total = 0;
+		x = 10;
+
+		for (i = 0; i < 5; i++) {
+		  total = total + adder(x);
+		}
+
+		document.write("<b>Program 2:</b> <br>");
+		document.write("The correct answer is: 275. <br>");
+		document.write("The current answer is: " + total + ".");
+
+		// This function takes in an integer and adds it 
+		// plus all previous integers together.
+		// For example, if n=3, result = 0 + 1 + 2 + 3
+		function adder(n) {
+		  var result; 
+		  result = 0;  
+		  var i;
+		  for (i = 0; i < (n+1); i++) {
+			result = result + i;
+		  }
+
+		  return result;
+		}
+	</script>
+
+
+</body>
+</html>

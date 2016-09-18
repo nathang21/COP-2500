@@ -1,0 +1,112 @@
+<!-- 
+	
+	By Joe Moceri 
+	Flashcard Prototype
+	Majority is done in javascript for grading purposes.
+	
+-->
+
+<html>
+	<head>
+		<title>Flashcards</title>
+	</head>
+	<body>
+	
+	<script type="text/javascript">
+		
+		document.write("<h1>Flashcards</h1>");
+		
+		document.write("<span id=\"previous\" onclick=\"shift(0)\">Previous </span>");
+		document.write("<span id=\"next\" onclick=\"shift(1)\">Next</span>");
+		document.write("<p></p>");
+		
+		document.write("<img onclick=\"flip(1)\" id=\"image1\" src=\"images/image1.jpg\" />");
+		document.write("<img onclick=\"flip(2)\" id=\"image2\" src=\"images/image2.jpg\" />");
+		document.write("<img onclick=\"flip(3)\" id=\"image3\" src=\"images/image3.jpg\" />");
+		document.write("<img onclick=\"flip(4)\" id=\"image4\" src=\"images/image4.jpg\" />");
+		document.write("<img onclick=\"flip(5)\" id=\"image5\" src=\"images/image5.jpg\" />");
+		document.write("<img onclick=\"flip(6)\" id=\"image6\" src=\"images/image6.jpg\" />");
+		document.write("<img onclick=\"flip(7)\" id=\"image7\" src=\"images/image7.jpg\" />");
+		document.write("<img onclick=\"flip(8)\" id=\"image8\" src=\"images/image8.jpg\" />");
+		document.write("<img onclick=\"flip(9)\" id=\"image9\" src=\"images/image9.jpg\" />");
+		document.write("<img onclick=\"flip(10)\" id=\"image10\" src=\"images/image10.jpg\" />");
+		
+		var information = new Array(10);
+		
+		information[0] = "Click the image!";
+		information[1] = "Click the image!";
+		information[2] = "Click the image!";
+		information[3] = "Click the image!";
+		information[4] = "Click the image!";
+		information[5] = "Click the image!";
+		information[6] = "Click the image!";
+		information[7] = "Click the image!";
+		information[8] = "Click the image!";
+		information[9] = "Click the image!";
+		
+		var answers = new Array(10);
+		
+		answers[0] = "\"Guernica.\" Pablo Picasso. 1937. Spanish. Surrealist Abstract.";
+		answers[1] = "\"Autumn Rhythm.\" Jackson Pollock. 1950. American. Abstract Expressionism.";
+		answers[2] = "\"Girl With A Pearl Earring.\" Johannes Vermeer. C.1665. Dutch. Baroque.";
+		answers[3] = "\"Las Meninas.\" Diego Velazquez. 1656. Spanish. Baroque.";
+		answers[4] = "\"Mona Lisa.\" Leonardo Da Vinci. Italian. 1503-1506. Rennaissance.";
+		answers[5] = "\"Old Guitarist.\" Picasso. 1903. Spanish. Expressionism.";
+		answers[6] = "\"Starry Night.\" Vincent Van Gogh. 1889. Dutch. Post-Impressionism.";
+		answers[7] = "\"The Kiss.\" Gustav Klimt. 1908-1909. Austrian. Symbolism.";
+		answers[8] = "\"The Persistence of Memory.\" Salvador Dali. 1931. Spanish. Surrealism.";
+		answers[9] = "\"The Scream.\" Edvard Munch. 1893. Norwegian. Expressionism.";
+		
+		var curImage = 1;
+		
+		document.write("<p id=\"cardInformation\">" + information[0] + "</p>");
+		
+		var cardInfo = document.getElementById("cardInformation");
+		
+		for(i = 2; i <= 10; i++){
+			document.getElementById("image" + i.toString()).style.display = "none";
+		}
+		
+		function flip(cardNumber){
+			
+			if(cardInfo.innerHTML == information[cardNumber - 1])
+				cardInfo.innerHTML = answers[cardNumber - 1];
+			else
+				cardInfo.innerHTML = information[cardNumber - 1];
+
+		}
+		
+		function shift(type){
+			
+			document.getElementById("image" + curImage).style.display = "none";
+			
+			if(type === 0){
+				curImage--;
+				
+				if(curImage < 1)
+					curImage = 10;
+					
+				document.getElementById("image" + curImage).style.display = "block";
+			}
+			if(type === 1){
+				curImage++;
+				
+				if(curImage > 10)
+					curImage = 1;
+					
+				document.getElementById("image" + curImage).style.display = "block";
+			}
+			
+			cardInfo.innerHTML = information[curImage - 1];
+		
+		}
+	
+
+	</script>
+	<form> 
+<input type=button 
+value="I'm ready for the quiz!"
+onClick="self.location='quiz.html'">
+</form> 	
+	</body>
+</html>

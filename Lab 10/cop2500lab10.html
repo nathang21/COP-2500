@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 10 -->
+</head>
+
+<body>
+
+	<script language=JavaScript>
+		// Part 1
+		var students= new Array();
+		students[0]= "     Doe";
+		students[1]= "     Jones";
+		students[2]= "     Smith";
+		students[3]= "     Torres";
+
+		var workItems= new Array();
+		workItems[0]= "Research Paper";
+		workItems[1]= "Pop Quizzes";
+		workItems[2]= "Midterms";
+		workItems[3]= "Final";
+
+		var array= new Array();
+		array[0]= new Array();
+		array[1]= new Array();
+		array[2]= new Array();
+		array[3]= new Array();
+		array[0][0]= new Array(1);
+		array[0][1]= new Array(10);
+		array[0][2]= new Array(2);
+		array[0][3]= new Array(1);
+		array[1][0]= new Array(1);
+		array[1][1]= new Array(10);
+		array[1][2]= new Array(2);
+		array[1][3]= new Array(1);
+		array[2][0]= new Array(1);
+		array[2][1]= new Array(10);
+		array[2][2]= new Array(2);
+		array[2][3]= new Array(1);
+		array[3][0]= new Array(1);
+		array[3][1]= new Array(10);
+		array[3][2]= new Array(2);
+		array[3][3]= new Array(1);
+
+		// Part 2
+		for(var i=0;i<students.length;i++)
+		{
+		document.write("<b>" + students[i] + ":</b><br>");
+
+
+		for(var j=0;j<workItems.length;j++) 
+		{
+		document.write(workItems[j] + ": ");
+
+
+		for(var k=0;k<array[i][j].length;k++)
+		{
+		array[i][j][k]= Math.floor(Math.random() * 50) + 50;
+		document.write(array[i][j][k] + ", ");
+
+		}
+		document.write("<br/>");
+		}
+		document.write("<br/>");
+		}
+	</script>
+
+</body>
+</html>

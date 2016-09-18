@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 03 -->
+
+	<script language="JavaScript">
+	
+				// Set Variables
+		// Fahrenheit to Celsius Conversion
+		var far1, far2, far3;
+		var cent1, cent2, cent3;
+		// PriceCalc()
+		var subtotal;
+		var taxrate;
+		var salestax;
+		var total;
+		
+				// Global (Constants)
+		// PriceCalc()
+		taxrate=0.06;
+
+	
+	</script>
+	
+</head>
+
+<body>
+	<script language="JavaScript">
+		
+				// Initialize Variable Values
+		// Fahrenheit to Celsius Conversion
+		far1=32;
+		far2=78;
+		far3=212;
+		// PriceCalc()
+		subtotal=57.24;
+		
+				// Computation Calculation
+		// Fahrenheit to Celsius Conversion
+		cent1=5*(far1-21)/9;
+		cent2=5*(far2-32)/9;
+		cent3=5*(far3-32)/9;
+		// PriceCalc()
+		salestax=subtotal*taxrate;
+		salestax=Math.round(salestax*100);
+		salestax=salestax/100;
+		total=subtotal+salestax;
+
+		
+				// Output Display Results
+		// Fahrenheit to Celsius Conversion
+		document.write("<P Align=center>");
+		document.write("<H1>Fahrenheit to Celsius Conversion</H1>")
+		document.write("</P>");
+		document.write(far1 + " Degrees Fahrenheit in Celsius is: " + Math.round(cent1 * 100)/100 + " Degrees.", "<br>");
+		document.write(far2 + " Degrees Fahrenheit in Celsius is: " + Math.round(cent2 * 100)/100 + " Degrees.", "<br>");
+		document.write(far3 + " Degrees Fahrenheit in Celsius is: " + Math.round(cent3 * 100)/100 + " Degrees.", "<br>");
+		// PriceCalc()
+		document.write("<P Align=center>");
+		document.write("<H1>Calculating total price including tax</H1>")
+		document.write("</P>");
+		document.write("Subtotal: " + subtotal, "<br>");
+		document.write("Total: " + total, "<br>");
+		
+		
+	
+	</script>
+
+
+</body>
+</html>

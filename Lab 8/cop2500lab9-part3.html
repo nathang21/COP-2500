@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Nathan Guenther</title>
+<!-- Comment Lines -->
+<!-- Nathan Guenther -->
+<!-- nathanpguenther@knights.ucf.edu -->
+<!-- Lab 08 (or Lab 09?) Part 3 -->
+
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+	
+		// Declare variable and assign value based on input from user prompt.
+		var x=prompt("Enter a number between 0 and 10:","")
+		
+		// Check for Errors
+		try
+		{
+			if(x>10)
+			{
+				throw "Error1";
+			}
+			else if(x<0)
+			{
+				throw "Error2";
+			}
+			else
+			{
+			document.write("You entered number " + x);
+			}
+		}
+		
+		// Catch errors and alert user if found
+		catch(err)
+		{
+			if(err=="Error1")
+			{
+				alert("Error! That value is greater than 10!");
+			}
+			if(err=="Error2")
+			{
+				alert("Error! That value is Negative.");
+			}
+		}
+		
+	</script>
+</body>
+</html>
